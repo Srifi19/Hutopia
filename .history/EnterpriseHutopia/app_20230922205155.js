@@ -10,9 +10,10 @@ const enterpriseRoutes = require('./api/Routes/enterpriseRoute');
 
 // Middleware
 
+
 app.use(express.json());
 app.use(bodyParser.json());
-
+// app.use(passport.initialize());
 
 // Routes
 app.use('/api/job' , jobRoutes);
