@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "EnterpriseHutopia", "EnterpriseHutopia\EnterpriseHutopia.njsproj", "{1C69A593-D244-4DB5-9587-1AB7718F226B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C69A593-D244-4DB5-9587-1AB7718F226B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C69A593-D244-4DB5-9587-1AB7718F226B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C69A593-D244-4DB5-9587-1AB7718F226B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C69A593-D244-4DB5-9587-1AB7718F226B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1E24D1A7-744B-464F-9595-7738A76242A6}
+	EndGlobalSection
+EndGlobal
