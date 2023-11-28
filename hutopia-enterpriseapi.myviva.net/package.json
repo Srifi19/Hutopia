@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.3",
+    "fs": "^0.0.1-security",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "logger": "^0.0.1",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.6.5",
+    "nodemailer": "^6.9.7",
+    "nodemon": "^3.0.1",
+    "path": "^0.12.7",
+    "uuid": "^9.0.1",
+    "winston": "^3.11.0"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "name": "hutopia-enterpriseapi.myviva.net",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "author": "sami",
+  "license": "ISC",
+  "description": ""
+}

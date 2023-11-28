@@ -42,7 +42,8 @@ class JobModel {
     async GetAllJobsForEnterprise(userId) {
         try {
             const result = await db.query('Select db_Enterprise_HomePage_GetAllJobs(?)', userId);
-            const RetrievalFromJson = require('../Helpers/RetrievalFromJson')
+            
+            return RetrievalFromJson.retrieve(result[0][0]);
         } catch (error) {
             throw error;
         }
@@ -58,7 +59,7 @@ class JobModel {
     async GetJobInformations(JobId) {
         try {
             const result = await db.query('Select db_Job_GetJobInfo(?)', JobId);
-            const RetrievalFromJson = require('../Helpers/RetrievalFromJson')
+            return RetrievalFromJson.retrieve(result[0][0]);
         } catch (error) {
             throw error;
         }
@@ -74,7 +75,7 @@ class JobModel {
     async GetJobDetailedInformations(JobId) {
         try {
             const result = await db.query('Select db_Job_GetJobDetailedInfos(?)', JobId);
-            const RetrievalFromJson = require('../Helpers/RetrievalFromJson')
+            return RetrievalFromJson.retrieve(result[0][0]);
         } catch (error) {
             throw error;
         }
@@ -94,7 +95,7 @@ class JobModel {
             const jsondata = JSON.stringify(dataSchedule);
 
             const result = await db.query('Call db_Job_CreateJobSchedule(?, ?, ?)', [userId, JobId, jsondata]);
-            const RetrievalFromJson = require('../Helpers/RetrievalFromJson')
+        
         } catch (error) {
             console.log(error);
             throw error;

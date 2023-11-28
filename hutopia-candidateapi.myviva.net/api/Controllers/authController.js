@@ -9,7 +9,7 @@ const loggerHelper = require("../Helpers/loggerHelper");
 
 exports.registerMainInfos = async (req, res) => {
   const { email, password } = req.body;
-  
+    console.log(req.body)
   const hashedPass = await bcrypt.hash(password,saltRound);
   await authModel
     .registerMainInfos(email, hashedPass)
@@ -32,7 +32,9 @@ exports.registerMainInfos = async (req, res) => {
 
 exports.registerPersonalInfos = async (req, res) => {
     const userId = req.userId;
-    const {firstName,lastName,gender} = req.body; //dob
+    console.log(req.body)
+    console.log(userId);
+    const {firstName ,lastName ,gender } = req.body; //dob
     const picturePath = null;
     if(false){
         const {photoPath} = req.files;
@@ -63,6 +65,8 @@ exports.registerPersonalInfos = async (req, res) => {
 exports.registerProfessionalInfos = async (req, res) => {
 
     const userId = req.userId;
+    console.log(userId);
+    console.log(req.body)
     const {professionalTitle,preferedJob,country,town} = req.body; // postalCode , StreetAddress bio
     if(false){
         console.log(req.files);

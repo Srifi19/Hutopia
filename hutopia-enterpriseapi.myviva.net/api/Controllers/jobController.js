@@ -39,6 +39,7 @@ exports.GetAllJobsForEnterprise = async (req, res) => {
 
     try {
         const data = await jobModel.GetAllJobsForEnterprise(userId);
+        console.log(data);
         res.status(200).json({success: true, message: 'Jobs successfully fetched.', data: data});
     } catch (error) {
         logger.error('Error: ', error);

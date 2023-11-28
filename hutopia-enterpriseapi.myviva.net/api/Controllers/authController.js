@@ -128,6 +128,7 @@ exports.registerCompanyInfos = async (req, res) => {
     behance,
     instagram,
     pintrest,
+    About
   } = req.body;
   const { image } = req.files;
 
@@ -139,7 +140,8 @@ exports.registerCompanyInfos = async (req, res) => {
     linkedin,
     behance,
     instagram,
-    pintrest
+    pintrest,
+    // About
   );
   if (true) {
     const picturePath = await fileHandling
@@ -163,7 +165,8 @@ exports.registerCompanyInfos = async (req, res) => {
         behance,
         instagram,
         pintrest,
-        picturePath
+        picturePath,
+        About
       )
       .then(() => {
         loggerHelper.SuccessLogger(
@@ -263,16 +266,20 @@ exports.login = async (req, res) => {
           .compare(password, pass)
           .then(async (match) => {
             if (match) {
-              const userId = await authModel.loginUser(email);
+         
+              const user = await authModel.loginUser(email);
+              console.log(user);
+              const userId = user.Id;
               loggerHelper.SuccessLogger(email, `User logged in successfully`);
               const token = jwt.sign({ userId }, process.env.jwtSecret, {
                 expiresIn: "12h",
               });
+              const step = user.Step
               res.header("Authorization", `Bearer ${token}`);
               res.status(200).json({
                 success: true,
                 message: "Logging in was successful.",
-                data: { token },
+                data: { token  , step},
               });
             } else {
               loggerHelper.ErrorLogger(
@@ -715,23 +722,9 @@ exports.verifyOTPToken = async (req, res) => {
           email,
           "verifyOTPToken pin has been Validated"
         );
-        if (flag == "0") {
+        
           await this.registerMainInfos(req, res);
-        } else {
-          if (data != null) {
-            const userId = data.userId;
-            const EnterpriseId = data.enterpriseId;
-            const token = jwt.sign({ userId }, config.jwtSecret, {
-              expiresIn: "12h",
-            });
-            res.header("Authorization", `Bearer ${token}`);
-            res.status(200).json({
-              success: true,
-              message: "Logging in was successful.",
-              data: { token },
-            });
-          }
-        }
+        
       })
       .catch((error) => {
         loggerHelper.ErrorLogger(

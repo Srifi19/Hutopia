@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hutopia-entreprise",
+  "private_key_id": "1535f81231c2bc606577a0116ee46ac93cb5f538",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDQjG6QMPVepK7w\nezjL33KkDsZtv6GfgA5vBmyoiF9+78IpSlUrCmQvxidhVxvRjQi6sfBQ/yWDn80O\nhYU1n9HeD4z9SQAdokJwblRtbGnkb7LJ/5N6ShQowZD+q9KEhggBbpbJsrQKl2Ks\nHigrYyuxifrTnToedewY7Eu50t6czBCFcUp30hZ1ahVosnG5eC24/sBB5iF3xc82\nssn7A8AZNXpCk4IttWdPCVFzUsAkUkgs8x5SU9Ki42EGTfZ6/fDaAQEmI/rXSfoz\nB0wKpemuXL4SJ1MRh3JRSJBAKZIDCYeL028m1CDxHInuArwIGAkgzZelT6LsuAO6\nkjRjc4V/AgMBAAECggEAE+Z0Pgq8V0gnfPSDkm/wXHeGd5ftYC8T8YQI7IbhQ4q1\nM3bceRHYRpDF8Do9aG0cIKIn8h3h7zuMxMgSUom9UoKXkkUCUrf8vZ+UxQ5IoOih\nt56aOY8F4AlWGl8iyv+PljQx0lRc05S0VzbXeXBqQNpCsFyH9iEliULlfpMAwbBk\nVO1feF27mlAYo2jUjneh2DR9sMtvzk9aY01q/sN3nNPHB/r0x06C9q+mkDsty/AP\nXT5MtJ9Qf/JV7MLrLLIEt3I+v6kP28NHi5SjI/jmGtamaSZW+59ikns7Sys6DS7q\nQmmaYfjVwvnKA7wGWO3kYyoK8v0iDBtD8ZvdolxNZQKBgQD1AcBXHoiEuW5mDS3n\nE4N26FOruur3E42qTauAAe3Iu+J+1zB+JgIEZMc2DgGZAHWm5aBeVwfLq9/CN8Y0\nq+OY70x5UYI0SjemhyjQ5tS/KyhAKPXxLet955T3y/rQxPXXBM8EiFpcNusAwXGJ\nWiwyowa0kg9h5SZRnOAPwjSOVQKBgQDZ5+fnIcdCfS31z9JWWlkXnDx+DVTIOs1b\n9mbmDK7sedHnuATgoFJrQPfA29+Zm6uZ5MalMDKMQeeYzTXcCCjSaQ0IrxKr69xj\nuVI/GmZ0pUo+OzKMNtEJTtGhkO1JEzwi7fGOvNlp24/wLgbnyQG++bqqyYfO6lg1\nJfoOqaPwgwKBgQC/fqHttcCwNBq0isKA5ICRNJ8JD2xMtyy3mkNcJqXKigdKajjN\nsDlNY9NMTYA0LObIDpvcgJtoNisKqvsw+dRHGWolPG7PHd8HOobNWE2aKUopc5pe\n6iwwWQvW7chY2kjnyStg+I3fm1DsY0WxPBhlb4RzJ+H7+tWLXljGGF1pjQKBgQCW\n1QOc5bC7wVJy+CusQlWxFiB5UFkDUFCd+202iEj8v0YgkywtIExsmUflY0zfUvXx\nTH6EEVyr4WKiTkmdyLgZDUZMYIMYJecj0D+yFmAdFdzSPr+6dqczPi+1GlBlaL8T\nnoi6ONZ1g9macwGsp2JiAxLG7UDoZSYxg9wXEi28aQKBgAzq1xNFl8b94OXAZzmO\ndglUU8EvcP+1C+G/sfu7kqUrLLWrDt/dMXurXJelUWG7KxxBsB8HAYazPpZuZNMW\nDQV4MvW1KVjlfwwiYFBMIfXk/BUxlq6D27/G26roqTOCPS0ciBv+OVfjTFUPVp29\nO4RQO4cYFr1u7+W+iRXEo4FP\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-zbwtb@hutopia-entreprise.iam.gserviceaccount.com",
+  "client_id": "105030105123991482824",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-zbwtb%40hutopia-entreprise.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

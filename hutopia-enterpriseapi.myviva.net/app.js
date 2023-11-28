@@ -21,7 +21,7 @@ app.use(express.json());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 app.use(fileupload());
-// app.use(passport.initialize());
+// app.use(passport.initialize()); 8iyaret r2yi
 
 // Routes
 

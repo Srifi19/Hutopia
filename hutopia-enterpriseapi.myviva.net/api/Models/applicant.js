@@ -10,7 +10,7 @@ class ApplicantModel {
     async GetAllApplicants(jobId) {
         try {
             const result = await db.query("Select db_Matching_ByJob_GetAllApplicants(?)", [jobId]);
-            RetrievalFromJson.retrieve(result)
+            return RetrievalFromJson.retrieve(result[0][0])
         } catch (error) {
             console.log(error);
         }

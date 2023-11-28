@@ -64,10 +64,10 @@ class AuthModel {
      * @param {json} Socials - Social media links (as an json).
      * @throws {Error} - Throws an error if there's a database query issue.
      */
-    async registerCompanyInfos(UserId, CompanyName, phoneNumber, Website, Industry,linkedin , behance ,instagram,pintrest,picturePath) {
+    async registerCompanyInfos(UserId, CompanyName, phoneNumber, Website, Industry,linkedin , behance ,instagram,pintrest,picturePath , About) {
         try {
             // Convert Socials to JSON
-            await db.query('Call db_User_Register_Enterprise_CompanyInfo(?,?,?,?,?,?,?,?,?,?)', [UserId, CompanyName, phoneNumber, Website, Industry,linkedin , behance ,instagram,pintrest , picturePath]);
+            await db.query('Call db_User_Register_Enterprise_CompanyInfo(?,?,?,?,?,?,?,?,?,?)', [UserId, CompanyName, phoneNumber, Website, Industry,linkedin , behance ,instagram,pintrest , picturePath , About]);
         } catch (error) {
             console.log(error);
             throw error;
@@ -105,6 +105,7 @@ class AuthModel {
     async getPassword(email) {
         try {
             const result = await db.query('Select db_GetPassword(?)', [email]);
+            
             return RetrievalFromJson.retrieve(result[0][0])
 
         } catch (error) {
@@ -141,7 +142,7 @@ class AuthModel {
         try {
             // Query the database to authenticate the user (you should compare hashed passwords)
             const result = await db.query('SELECT db_Enterprise_Login(?)', [email]);
-            return RetrievalFromJson.retrieve(result[0][0])
+            return  RetrievalFromJson.retrieve(result[0][0]);
         } catch (error) {
             throw error;
         }
