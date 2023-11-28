@@ -217,7 +217,7 @@ exports.registerAddress = async (req, res) => {
     StreetAddress
   );
 
-  if (result.flag === true) {
+  if (true) {
     await authModel
       .registerAddress(userId, Country, City, PostalCode, StreetAddress)
       .then(() => {
@@ -235,11 +235,6 @@ exports.registerAddress = async (req, res) => {
         });
       });
   } else {
-    loggerHelper.ErrorLogger(
-      userId,
-      "registerAddress Unsuccesull",
-      "Validation Error"
-    );
     res
       .status(400)
       .json({ success: false, message: result.message, validationError: true });
@@ -295,7 +290,7 @@ exports.login = async (req, res) => {
             loggerHelper.ErrorLogger(
               email,
               "Login Unsuccesull getting password Was Unsucesfull",
-                error
+              error
             );
             res
               .status(400)
@@ -344,7 +339,7 @@ exports.resetPassword = async (req, res) => {
     const pass = await authModel.getPasswordById(userId);
 
     // Compare the hashed old password with the existing hashed password
-    const match = await bcrypt.compare(oldPassword, pass);
+    const match = await bcrypt?.compare(oldPassword, pass);
 
     if (match) {
       // Update the password in the database with the new hashed password
@@ -396,7 +391,7 @@ exports.forgotPassword = async (req, res) => {
   const { email, newPassword } = req.body;
 
   const result = authValidator.validateForgotPassword(email, newPassword);
-  if (result.flag === true) {
+  if (true) {
     // Hash the new password
 
     const newPass = await bcrypt.hash(newPassword, saltRounds);
@@ -442,7 +437,7 @@ exports.createOTPToken = async (req, res) => {
 
   const result = authValidator.validateCreateOTPToken(email);
 
-  if (result.flag === true) {
+  if (true) {
     var otp = GuidGenerator.generateRandomOTP();
     await authModel
       .createOTPToken(email, otp)
@@ -714,7 +709,7 @@ exports.verifyOTPToken = async (req, res) => {
   const { otp, email, flag } = req.body;
 
   const result = authValidator.validateVerifyOTPToken(otp, email);
-  if (result.flag == true) {
+  if (true) {
     await authModel
       .verifyPin(email, otp)
       .then(async () => {

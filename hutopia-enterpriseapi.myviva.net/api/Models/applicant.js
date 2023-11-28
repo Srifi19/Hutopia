@@ -1,11 +1,10 @@
-
 // models/EnterpriseModel.js
-const db = require('../Database/dbConnection'); // Import your database connection //
-const Dictionary = require('../Helpers/Dictionary')
-const RetrievalFromJson = require('../Helpers/RetrievalFromJson')
+const db = require("../Database/dbConnection"); // Import your database connection //
+const Dictionary = require("../Helpers/Dictionary");
+const RetrievalFromJson = require("../Helpers/RetrievalFromJson");
 
 class ApplicantModel {
-    constructor() { }
+  constructor() {}
 
     async GetAllApplicants(jobId) {
         try {
@@ -15,10 +14,7 @@ class ApplicantModel {
             console.log(error);
         }
     }
-
-}
-
-
+  }
 
 
 module.exports = new ApplicantModel();
