@@ -18,6 +18,7 @@ class AuthModel {
    * @returns {Promise<string>} - Resolves to the user's ID if registration is successful.
    * @throws {Error} - Throws an error if there's a database query issue.
    */
+  
   async registerMainInfos(email, password) {
     try {
       // Generate unique UserNo and UserId
@@ -58,8 +59,6 @@ class AuthModel {
       throw error;
     }
   }
-
-
     /**
      * Register company information associated with the user.
      *
@@ -80,6 +79,7 @@ class AuthModel {
             throw error;
         }
     }
+
 
   /**
    * Register company information associated with the user.

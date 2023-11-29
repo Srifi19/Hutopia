@@ -7,12 +7,12 @@ class ProspectModel {
 
     async getAllProspects(jobId){
         try {
-            console.log(jobId);
+            
             const result = await db.query("Select db_prospects_GetAllProspects(?)" , [jobId])
             return RetrievalFromJson.retrieve(result[0][0])
         } catch (error) {
-                console.log(error);
-                throw error;
+            console.log(error);
+            throw error;
         }
     }
 }
